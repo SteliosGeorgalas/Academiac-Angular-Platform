@@ -1,8 +1,7 @@
 <div class="loginPage">
-  <mat-card>
-
+  <img ngSrc="assets/user.png" class="user" width="512" height="512" alt="">
     <form>
-      <mat-toolbar class="loginHeader" role="heading" color="primary">Login</mat-toolbar>
+      <h2>Academiac Login Form</h2>
       <mat-form-field>
         <input matInput placeholder="Email" name="email" [(ngModel)]="email">
       </mat-form-field>
@@ -20,5 +19,4 @@
       <div class="invalidCredentialsDiv" *ngIf="invalidCredentials">Invalid Username or Password.
       </div>
     </form>
-  </mat-card>
 </div>
