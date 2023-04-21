@@ -1,0 +1,71 @@
+.loginPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.invalidCredentialsDiv {
+    text-align: center;
+    color: red;
+}
+
+.loginPage > mat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.loginPage > mat-card > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginHeader {
+    justify-content: center;
+    background: #f68053;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.loginButton {
+    margin: 10px;
+}
+.loginIcon {
+    margin-right: 2px;
+}
+.loginGoogleButton {
+    margin: 10px;
+}
+
+a {
+    margin: 10px;
+    width: 96%;
+    align-self: center;
+}
+
+.registerButton {
+    width: 100%;
+}
+
+/*smallScreen*/
+@media screen and (min-width:580px){
+    .loginPage > mat-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        height: 30%;
+    }
+
+    .loginPage > mat-card > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        height: 90%;
+    }
+}

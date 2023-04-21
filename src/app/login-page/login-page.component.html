@@ -1,0 +1,24 @@
+<div class="loginPage">
+  <mat-card>
+
+    <form>
+      <mat-toolbar class="loginHeader" role="heading" color="primary">Login</mat-toolbar>
+      <mat-form-field>
+        <input matInput placeholder="Email" name="email" [(ngModel)]="email">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" name="password"
+               [(ngModel)]="password">
+      </mat-form-field>
+
+      <button class="loginButton" color="primary" (click)="login()" mat-raised-button type="submit">
+        <mat-icon class="loginIcon">login</mat-icon>
+        LOGIN
+      </button>
+
+      <div class="invalidCredentialsDiv" *ngIf="invalidCredentials">Invalid Username or Password.
+      </div>
+    </form>
+  </mat-card>
+</div>
