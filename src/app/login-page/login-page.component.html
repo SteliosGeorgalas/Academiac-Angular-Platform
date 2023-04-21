@@ -1,22 +1,25 @@
+<div class="loginPageContainer">
 <div class="loginPage">
-  <img ngSrc="assets/user.png" class="user" width="512" height="512" alt="">
+    <img ngSrc="assets/user.png" class="user" width="512" height="512" alt="">
     <form>
-      <h2>Academiac Login Form</h2>
-      <mat-form-field>
-        <input matInput placeholder="Email" name="email" [(ngModel)]="email">
-      </mat-form-field>
+        <h2>Academiac Login Form</h2>
+        <mat-form-field>
+            <input matInput placeholder="Email" name="email" [(ngModel)]="email">
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput type="password" placeholder="Password" name="password"
-               [(ngModel)]="password">
-      </mat-form-field>
+        <mat-form-field>
+            <input matInput type="password" placeholder="Password" name="password"
+                   [(ngModel)]="password">
+        </mat-form-field>
 
-      <button class="loginButton" color="primary" (click)="login()" mat-raised-button type="submit">
-        <mat-icon class="loginIcon">login</mat-icon>
-        LOGIN
-      </button>
+        <button class="loginButton" color="primary" (click)="login()" mat-raised-button
+                type="submit">
+            <mat-icon class="loginIcon">login</mat-icon>
+            LOGIN
+        </button>
 
-      <div class="invalidCredentialsDiv" *ngIf="invalidCredentials">Invalid Username or Password.
-      </div>
+        <div class="invalidCredentialsDiv" *ngIf="invalidCredentials">Invalid Username or Password.
+        </div>
     </form>
+</div>
 </div>

@@ -1,59 +1,60 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDrawer } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
-import { Observable, of } from 'rxjs';
-import { LocalStorageManager } from '../services/view-manager-service/local-storage';
-import { ViewManager } from '../services/view-manager-service/view-manager.service';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatDrawer} from '@angular/material/sidenav';
+import {Router} from '@angular/router';
+import {Observable, of} from 'rxjs';
+import {LocalStorageManager} from '../services/view-manager-service/local-storage';
+import {ViewManager} from '../services/view-manager-service/view-manager.service';
 
 @Component({
-  selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.css']
+    selector: 'app-sidenav',
+    templateUrl: './sidenav.component.html',
+    styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
-  @ViewChild('drawer')
-  public sidenav!: MatDrawer;
-  showMenuAndToolbar: Observable<boolean> = of(false);
+    @ViewChild('drawer')
+    public sidenav!: MatDrawer;
+    showMenuAndToolbar: Observable<boolean> = of(false);
 
-  isStudent: boolean = false;
+    isStudent: boolean = false;
 
-  constructor(private viewManager: ViewManager, private router: Router, private localStorage: LocalStorageManager) { }
+    constructor(private viewManager: ViewManager, private router: Router, private localStorage: LocalStorageManager) {
+    }
 
-  ngOnInit(): void {
-    this.showMenuAndToolbar = this.viewManager.ShowMenuAndToolbar;
+    ngOnInit(): void {
+        this.showMenuAndToolbar = this.viewManager.ShowMenuAndToolbar;
 
-    this.viewManager.ShouldToggleSideNav.subscribe(() => {
-      if (this.sidenav == undefined) {
-        return;
-      }
+        this.viewManager.ShouldToggleSideNav.subscribe(() => {
+            if (this.sidenav == undefined) {
+                return;
+            }
 
-      this.isStudent = this.localStorage.getUserType() == 1;
-      
-      this.sidenav.toggle();
-    });
-  }
+            this.isStudent = this.localStorage.getUserType() == 1;
 
-  logout(): void {
-    this.router.navigate(["/login"]);
-  }
+            this.sidenav.toggle();
+        });
+    }
 
-  navigateToCourseList(): void {
-    this.router.navigate(["/courses"]);
-  }
+    logout(): void {
+        this.router.navigate(["/login"]);
+    }
 
-  navigateToTeacherCourseList(): void {
-    this.router.navigate(["/teacherCourses"]);
-  }
+    navigateToCourseList(): void {
+        this.router.navigate(["/courses"]);
+    }
 
-  navigateToTeacherInfo(): void {
-    this.router.navigate(["/teacherInfo"]);
-  }
+    navigateToTeacherCourseList(): void {
+        this.router.navigate(["/teacherCourses"]);
+    }
 
-  navigateToDashboard(): void {
-    this.router.navigate(["/dashboard"]);
-  }
+    navigateToTeacherInfo(): void {
+        this.router.navigate(["/teacherInfo"]);
+    }
 
-  navigateToStudentInfo(): void {
-    this.router.navigate(["/studentInfo"]);
-  }
+    navigateToDashboard(): void {
+        this.router.navigate(["/dashboard"]);
+    }
+
+    navigateToStudentInfo(): void {
+        this.router.navigate(["/studentInfo"]);
+    }
 }

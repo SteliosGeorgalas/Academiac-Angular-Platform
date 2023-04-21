@@ -29,27 +29,27 @@ export class LoginPageComponent implements OnInit {
             return;
         }
 
-        // const s = this.database.students.find(student => {
-        //     return student.email == this.email;
-        // });
-        //
-        // if (s != undefined) {
-        //     this.router.navigate(["/dashboard"]);
-        //     this.localStorage.setUserType(1);
-        //     this.localStorage.setUserID(s.AM);
-        //     return;
-        // }
-        //
-        // const p = this.database.professors.find(professor => {
-        //     return professor.email == this.email;
-        // });
-        //
-        // if (p != undefined) {
-        //     this.router.navigate(["/dashboard"]);
-        //     this.localStorage.setUserType(2);
-        //     this.localStorage.setUserID(p.id);
-        //     return;
-        // }
+        const s = this.database.students.find(student => {
+            return student.email == this.email;
+        });
+
+        if (s != undefined) {
+            this.router.navigate(["/dashboard"]);
+            this.localStorage.setUserType(1);
+            this.localStorage.setUserID(s.AM);
+            return;
+        }
+
+        const p = this.database.professors.find(professor => {
+            return professor.email == this.email;
+        });
+
+        if (p != undefined) {
+            this.router.navigate(["/dashboard"]);
+            this.localStorage.setUserType(2);
+            this.localStorage.setUserID(p.id);
+            return;
+        }
 
         this.invalidCredentials = true;
     }

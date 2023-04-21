@@ -16,13 +16,22 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
 import {NgOptimizedImage} from "@angular/common";
+import {CoursePageComponent} from "./course-page/course-page.component";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {DashboardPageComponent} from "./dashboard-page/dashboard-page.component";
+import {FullCalendarModule} from "@fullcalendar/angular";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
     declarations: [
         AppComponent,
         LoginPageComponent,
         ToolbarComponent,
-        SidenavComponent
+        CoursePageComponent,
+        SidenavComponent,
+        DashboardPageComponent
     ],
     imports: [
         BrowserModule,
@@ -32,14 +41,20 @@ import {NgOptimizedImage} from "@angular/common";
         MatToolbarModule,
         MatCardModule,
         MatInputModule,
+        MatDialogModule,
         MatIconModule,
         MatDividerModule,
         MatSidenavModule,
         MatButtonModule,
-        NgOptimizedImage
+        NgOptimizedImage,
+        MatTabsModule,
+        MatTableModule,
+        MatPaginatorModule,
+        FullCalendarModule
     ],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
+
 export class AppModule {
 }

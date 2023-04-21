@@ -5,8 +5,8 @@ html, body {
 }
 
 body {
-    margin:0;
-    padding:0;
-    background:url(assets/background.jpg);
+    margin: 0;
+    padding: 0;
+    background: url(assets/background.jpg);
     font-family: sans-serif;
 }

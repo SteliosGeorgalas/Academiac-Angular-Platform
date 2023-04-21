@@ -1,0 +1,13 @@
+full-calendar {
+
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+}
+
+.calendar {
+    display: flex;
+    justify-content: center;
+}
