@@ -10,11 +10,19 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
+import {ToolbarComponent} from "./toolbar/toolbar.component";
+import {SidenavComponent} from "./sidenav/sidenav.component";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatButtonModule} from "@angular/material/button";
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
     declarations: [
         AppComponent,
-        LoginPageComponent
+        LoginPageComponent,
+        ToolbarComponent,
+        SidenavComponent
     ],
     imports: [
         BrowserModule,
@@ -24,7 +32,11 @@ import {MatIconModule} from "@angular/material/icon";
         MatToolbarModule,
         MatCardModule,
         MatInputModule,
-        MatIconModule
+        MatIconModule,
+        MatDividerModule,
+        MatSidenavModule,
+        MatButtonModule,
+        NgOptimizedImage
     ],
     providers: [],
     bootstrap: [AppComponent]

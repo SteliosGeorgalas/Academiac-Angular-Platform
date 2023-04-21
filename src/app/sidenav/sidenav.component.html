@@ -1,0 +1,44 @@
+<mat-drawer-container>
+    <mat-drawer #drawer *ngIf="showMenuAndToolbar | async">
+
+        <button mat-button (click)="navigateToDashboard()" class="dashboardButton">
+            <mat-icon>calendar_month</mat-icon>
+        </button>
+        <mat-divider></mat-divider>
+
+        <div *ngIf="isStudent">
+            <button mat-button (click)="navigateToCourseList()" class="coursesButton">
+                <mat-icon>toc</mat-icon>
+            </button>
+            <mat-divider></mat-divider>
+        </div>
+
+        <div *ngIf="!isStudent">
+            <button mat-button (click)="navigateToTeacherCourseList()" class="teacherCoursesButton">
+                <mat-icon>toc</mat-icon>
+            </button>
+            <mat-divider></mat-divider>
+        </div>
+
+        <div *ngIf="!isStudent">
+            <button mat-button (click)="navigateToTeacherInfo()" class="teacherInfoButton">
+                <mat-icon>person</mat-icon>
+            </button>
+            <mat-divider></mat-divider>
+        </div>
+
+        <div *ngIf="isStudent">
+            <button mat-button (click)="navigateToStudentInfo()" class="studentInfoButton">
+                <mat-icon>person</mat-icon>
+            </button>
+            <mat-divider></mat-divider>
+        </div>
+
+        <button mat-button (click)="logout()" class="logoutButton">
+            <mat-icon>logout</mat-icon>
+        </button>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
