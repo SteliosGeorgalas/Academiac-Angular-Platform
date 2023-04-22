@@ -1,0 +1,20 @@
+<div class="mainPage">
+    <mat-card>
+        <mat-card-title>
+            Personal Information
+        </mat-card-title>
+        <mat-card-content>
+            <div>
+                <b>First Name:</b> {{professor.firstName}} <br>
+                <b>Last Name:</b> {{professor.lastName}}<br>
+                <b>Email:</b> {{professor.email}}<br>
+                <b>Profession:</b> {{professor.profession}}<br>
+                <b>Resume:</b>
+                <button mat-button type="submit" color="primary" (click)="open()">OPEN RESUME
+                </button>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+    </mat-card>
+</div>

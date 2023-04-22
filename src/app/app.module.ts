@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {LoginPageComponent} from "./login-page/login-page.component";
+import {LoginPageComponent} from "./components/login-page/login-page.component";
 import {FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
@@ -16,13 +16,23 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatButtonModule} from "@angular/material/button";
 import {NgOptimizedImage} from "@angular/common";
-import {CoursePageComponent} from "./course-page/course-page.component";
+import {CoursePageComponent} from "./components/course-page/course-page.component";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
-import {DashboardPageComponent} from "./dashboard-page/dashboard-page.component";
+import {DashboardPageComponent} from "./components/dashboard-page/dashboard-page.component";
 import {FullCalendarModule} from "@fullcalendar/angular";
 import {MatDialogModule} from "@angular/material/dialog";
+import {
+    TeacherCourseListPageComponent
+} from "./components/teacher-course-list-page/teacher-course-list-page.component";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {CourseListPageComponent} from "./components/course-list-page/course-list-page.component";
+import {
+    TeacherPersonalInfoPageComponent
+} from "./components/teacher-personal-info-page/teacher-personal-info-page.component";
+import {StudentInfoPageComponent} from "./components/student-info-page/student-info-page.component";
+import {StudentListPageComponent} from "./components/student-list-page/student-list-page.component";
 
 @NgModule({
     declarations: [
@@ -31,7 +41,12 @@ import {MatDialogModule} from "@angular/material/dialog";
         ToolbarComponent,
         CoursePageComponent,
         SidenavComponent,
-        DashboardPageComponent
+        DashboardPageComponent,
+        TeacherCourseListPageComponent,
+        CourseListPageComponent,
+        TeacherPersonalInfoPageComponent,
+        StudentInfoPageComponent,
+        StudentListPageComponent
     ],
     imports: [
         BrowserModule,
@@ -50,7 +65,8 @@ import {MatDialogModule} from "@angular/material/dialog";
         MatTabsModule,
         MatTableModule,
         MatPaginatorModule,
-        FullCalendarModule
+        FullCalendarModule,
+        MatExpansionModule
     ],
     providers: [],
     bootstrap: [AppComponent],

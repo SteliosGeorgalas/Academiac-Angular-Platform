@@ -1,0 +1,74 @@
+<div class="coursesPage">
+    <mat-tab-group dynamicHeight #tabs>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">card_membership</mat-icon>
+                All Courses
+            </ng-template>
+            <div class="courseList" *ngFor="let course of coursesUI">
+                <mat-card>
+                    <mat-card-title>Title: {{course.name}}</mat-card-title>
+                    <mat-card-content>
+                        Description: {{course.description}} |
+                        Professor: {{course.professorFirstName}} {{course.professorLastName}}
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <div *ngIf="course.isSubscribed">
+                            <button class="unsubscribeButton" color="warn" mat-raised-button
+                                    type="submit"
+                                    (click)="unsubscribeFromCourseList(course)">UNSUBSCRIBE
+                            </button>
+                        </div>
+                        <div *ngIf="!course.isSubscribed">
+                            <button class="subscribeButton" color="primary" mat-raised-button
+                                    type="submit"
+                                    (click)="subscribe(course)">SUBSCRIBE
+                            </button>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+                <mat-divider></mat-divider>
+            </div>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">school</mat-icon>
+                Subscribed Courses
+            </ng-template>
+            <div class="subscribedList" *ngFor="let sCourse of coursesUI">
+                <div *ngIf="sCourse.isSubscribed">
+                    <mat-card>
+                        <mat-card-title>
+                            Title: {{sCourse.name}}
+                        </mat-card-title>
+                        <mat-card-content>
+                            Description: {{sCourse.description}} |
+                            Professor: {{sCourse.professorFirstName}} {{sCourse.professorLastName}}
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button class="unsubscribeButton" color="warn" mat-raised-button
+                                    type="submit"
+                                    (click)="unsubscribe(sCourse)">UNSUBSCRIBE
+                            </button>
+                            <div class="visitCourse">
+                                <button mat-button (click)="navigateToCourseFromSubscribed(sCourse)"
+                                        class="visitCourseButton">
+                                    <mat-icon>info</mat-icon>
+                                    Visit Course
+                                </button>
+                            </div>
+                            <div class="emailProfessor">
+                                <button (click)="sendEmail(sCourse)" mat-button
+                                        class="emailProfessorButton">
+                                    <mat-icon>email</mat-icon>
+                                    E-mail
+                                </button>
+                            </div>
+                        </mat-card-actions>
+                    </mat-card>
+                    <mat-divider></mat-divider>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

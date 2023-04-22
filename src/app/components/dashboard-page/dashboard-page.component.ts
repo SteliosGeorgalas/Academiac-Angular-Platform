@@ -2,14 +2,14 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {FullCalendarComponent} from '@fullcalendar/angular';
 import {CalendarOptions} from '@fullcalendar/core';
-import {ViewManager} from '../services/view-manager-service/view-manager.service';
-import {Database} from '../services/view-manager-service/database.service';
+import {ViewManager} from '../../services/view-manager-service/view-manager.service';
+import {Database} from '../../services/view-manager-service/database.service';
 import {Router} from '@angular/router';
-import {LocalStorageManager} from '../services/view-manager-service/local-storage';
-import {Professor} from '../models/professor';
-import {Lectures} from "../models/lecture";
-import {Student} from "../models/student-list";
-import {Course} from "../models/course";
+import {LocalStorageManager} from '../../services/view-manager-service/local-storage';
+import {Professor} from '../../models/professor';
+import {Lectures} from "../../models/lecture";
+import {Student} from "../../models/student-list";
+import {Course} from "../../models/course";
 import dayGridPlugin from '@fullcalendar/daygrid';
 
 
@@ -74,13 +74,11 @@ export class DashboardPageComponent implements OnInit {
 
     }
 
-    // calendarOptions: CalendarOptions = {
-    //     initialView: 'dayGridMonth',
-    //
-    // };
     calendarOptions: CalendarOptions = {
         plugins: [dayGridPlugin],
-        initialView: 'dayGridMonth'
+        initialView: 'dayGridMonth',
+        eventColor: '#378006'
+
     };
 
     handleDateClick(arg: { dateStr: string; }) {

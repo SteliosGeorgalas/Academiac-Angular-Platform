@@ -1,0 +1,12 @@
+.mainPage{
+    display: flex;
+    justify-content: center;
+}
+
+mat-card{
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    border-radius: 10px;
+    background: white !important;
+}

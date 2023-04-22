@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ViewManager} from '../services/view-manager-service/view-manager.service';
+import {ViewManager} from '../../services/view-manager-service/view-manager.service';
 import {Router} from '@angular/router';
-import {LocalStorageManager} from '../services/view-manager-service/local-storage';
-import {Database} from '../services/view-manager-service/database.service';
+import {LocalStorageManager} from '../../services/view-manager-service/local-storage';
+import {Database} from '../../services/view-manager-service/database.service';
 
 @Component({
     selector: 'app-login-page',

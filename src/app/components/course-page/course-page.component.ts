@@ -4,10 +4,10 @@ import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {ActivatedRoute} from '@angular/router';
-import {Database} from '../services/view-manager-service/database.service';
-import {LocalStorageManager} from '../services/view-manager-service/local-storage';
-import {ViewManager} from '../services/view-manager-service/view-manager.service';
-import {AnnouncmentUiModel, CourseFile} from "../models/course-file";
+import {Database} from '../../services/view-manager-service/database.service';
+import {LocalStorageManager} from '../../services/view-manager-service/local-storage';
+import {ViewManager} from '../../services/view-manager-service/view-manager.service';
+import {AnnouncmentUiModel, CourseFile} from "../../models/course-file";
 
 @Component({
     selector: 'app-course-page',
