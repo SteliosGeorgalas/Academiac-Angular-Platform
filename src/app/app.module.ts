@@ -33,6 +33,7 @@ import {
 } from "./components/teacher-personal-info-page/teacher-personal-info-page.component";
 import {StudentInfoPageComponent} from "./components/student-info-page/student-info-page.component";
 import {StudentListPageComponent} from "./components/student-list-page/student-list-page.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -63,6 +64,7 @@ import {StudentListPageComponent} from "./components/student-list-page/student-l
         MatButtonModule,
         NgOptimizedImage,
         MatTabsModule,
+        HttpClientModule,
         MatTableModule,
         MatPaginatorModule,
         FullCalendarModule,

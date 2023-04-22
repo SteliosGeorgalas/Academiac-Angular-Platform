@@ -1,0 +1,12 @@
+.teacherInfoContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.teacherInfo{
+    background: white!important;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+}
+

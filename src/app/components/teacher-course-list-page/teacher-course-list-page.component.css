@@ -1,0 +1,12 @@
+.courseListTeacher{
+
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.courseListTeacherMain{
+    display: flex;
+    justify-content: center;
+}

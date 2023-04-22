@@ -16,3 +16,15 @@ mat-card-actions > button {
     max-width: 100%;
     overflow: auto;
 }
+
+.coursesPage{
+    background: white!important;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.coursePageContainer {
+    display: flex;
+    justify-content: center;
+}

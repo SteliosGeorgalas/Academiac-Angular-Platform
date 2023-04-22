@@ -1,36 +1,39 @@
-<div class="coursesPage">
-    <mat-tab-group dynamicHeight #tabs>
-        <mat-tab>
-            <ng-template mat-tab-label>
-                <mat-icon class="example-tab-icon">people</mat-icon>
-                &nbsp; Student List
-            </ng-template>
-            <div class="studentList" *ngFor="let student of studentList">
-                <div *ngFor="let id of student.idCourses">
-                    <div *ngIf="id == courseid">
-                        <mat-expansion-panel>
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>
-                                    {{student.firstName}}   {{student.lastName}}
-                                </mat-panel-title>
-                                <mat-panel-description>
-                                    {{student.description}}
-                                </mat-panel-description>
-                            </mat-expansion-panel-header>
-                            <mat-card-actions>
-                                <button mat-button class>
-                                    <mat-icon>info</mat-icon>
-                                    Email: {{student.email}} &nbsp; AM: {{student.AM}} &nbsp;
-                                    Semester: {{student.semester}}</button>
-                                <button (click)="sendEmail(student, courseid)" mat-button class>
-                                    <mat-icon>email</mat-icon>
-                                    Send E-mail
-                                </button>
-                            </mat-card-actions>
-                        </mat-expansion-panel>
+<div class="studentListPageContainer">
+    <div class="studentListPage">
+        <mat-tab-group dynamicHeight #tabs>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">people</mat-icon>
+                    &nbsp; Student List
+                </ng-template>
+                <div class="studentList" *ngFor="let student of studentList">
+                    <div *ngFor="let id of student.idCourses">
+                        <div *ngIf="id == courseid">
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        {{student.firstName}}   {{student.lastName}}
+                                    </mat-panel-title>
+                                    <mat-panel-description>
+                                        {{student.description}}
+                                    </mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <mat-card-actions>
+                                    <button mat-button class>
+                                        <mat-icon>info</mat-icon>
+                                        Email: {{student.email}} &nbsp; AM: {{student.AM}} &nbsp;
+                                        Semester: {{student.semester}}</button>
+                                    <button (click)="sendEmail(student, courseid)" mat-button class>
+                                        <mat-icon>email</mat-icon>
+                                        Send E-mail
+                                    </button>
+                                </mat-card-actions>
+                            </mat-expansion-panel>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </mat-tab>
-    </mat-tab-group>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
 </div>
+
