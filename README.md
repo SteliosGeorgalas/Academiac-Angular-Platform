@@ -1,5 +1,6 @@
 # Academiac
-
+Academiac is a web based platform where Students can interact with Teachers and vice versa.
+ 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
 
 ## Development server
